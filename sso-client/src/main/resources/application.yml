@@ -15,7 +15,8 @@ security:
 
 server:
   port: 8002
-  #    登录重定向，授权不成功。。。。一下午over
+  # 登录重定向，授权不成功
+  # 同一台机器都用localhost,这个一定要配,否则cookie混淆,用域名可以不配
   servlet:
     session:
       cookie:
