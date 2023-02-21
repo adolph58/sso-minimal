@@ -51,7 +51,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 // 作用域
                 .scopes("all")
                 // 重定向url
-                .redirectUris("http://localhost:8002/login","https://www.baidu.com")
+                .redirectUris("http://localhost:8002/login", "https://www.baidu.com")
                 // 自动授权
                 .autoApprove(true);
     }
