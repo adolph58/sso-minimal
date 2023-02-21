@@ -42,7 +42,12 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 // 授权密码
                 .secret(passwordEncoder.encode("admin"))
                 // 认证方式 密码/授权码/刷新令牌
-                .authorizedGrantTypes("password","authorization_code", "refresh_token")
+                // 四种授权方式：
+                // 授权码：authorization_code
+                // 隐藏式：implicit
+                // 密码式：password
+                // 客户端凭证：client_credentials
+                .authorizedGrantTypes("password","authorization_code", "refresh_token", "client_credentials", "implicit")
                 // 作用域
                 .scopes("all")
                 // 重定向url
